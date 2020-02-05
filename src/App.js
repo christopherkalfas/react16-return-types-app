@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import Header from './Header'
 import Teachers from './Teachers'
 import Footer from './Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Teachers />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  render(){
+    return [
+      <Header key='head'/>,
+      <Teachers key='teach'/>,
+      <Footer key='foot'/>
+    ]
+  }
 }
 
 export default App;
